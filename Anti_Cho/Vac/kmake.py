@@ -11,7 +11,7 @@ def main() :
     fname = sys.argv[1] #암호화 대상 파일
     tname = fname
 
-    fp = open(tname, 'rb')
+    fp = open(tname, 'rb') #파일 열기
     buf = fp.read()
     fp.close()
 
