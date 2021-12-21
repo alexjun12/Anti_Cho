@@ -25,7 +25,6 @@ def DecodeKMD(fname) : #KMD파일 복호화
 
         if f != fmd5 :
             raise SystemError
-
         buf3 = ''
         for c in buf2[4:] : # 0xFF로 XOR한다
             buf3 += chr(ord(c) ^ 0xFF)
@@ -79,6 +78,7 @@ if __name__ == '__main__' :
 
     fname = sys.argv[1] #악성코드 검사 대상파일
     size = os.path.getsize(fname)
+
     if(vsize.count(size)) :
         fp = open(fname, 'rb') #바이너리 모드로 읽기
         buf = fp.read()
